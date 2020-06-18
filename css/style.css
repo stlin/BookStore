@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 /* header */
 header {
     height: 100vh;
@@ -58,3 +62,30 @@ header {
 }
 
 /* end of common-title */
+.gallery-img {
+    backface-visibility: hidden;
+    transition: all .5s;
+}
+
+/* gallery */
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+.first-row {
+    transform: translateX(-300px);
+    opacity: 0;
+    transition: all 2.5s;
+}
+
+.second-row {
+    transform: translateX(300px);
+    opacity: 0;
+    transition: all 2.5s;
+}
+
+.change .first-row, .change .second-row {
+    transform: translateX(0);
+    opacity: 1;
+}
+/* end of gallery */
